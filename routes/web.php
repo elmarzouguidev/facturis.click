@@ -11,3 +11,8 @@ Route::get('/', function () {
 //Route::get('/track', [TrackerController::class, 'index'])->name('tracker');
 
 Route::get('/go/{shortURLKey}', '\AshAllenDesign\ShortURL\Controllers\ShortURLController');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
