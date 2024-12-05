@@ -13,6 +13,6 @@ Route::get('/', function () {
 Route::get('/go/{shortURLKey}', '\AshAllenDesign\ShortURL\Controllers\ShortURLController');
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => config('facturis.admin_url')], function () {
     Voyager::routes();
 });

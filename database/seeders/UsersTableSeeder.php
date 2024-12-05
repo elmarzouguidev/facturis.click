@@ -20,9 +20,9 @@ class UsersTableSeeder extends Seeder
             $role = Role::where('name', 'admin')->firstOrFail();
 
             User::create([
-                'name'           => 'Admin',
-                'email'          => 'admin@admin.com',
-                'password'       => bcrypt('password'),
+                'name'           => 'Abdelghafour',
+                'email'          => config('facturis.admin_email'),
+                'password'       => bcrypt(config(('facturis.admin_password'))),
                 'remember_token' => Str::random(60),
                 'role_id'        => $role->id,
             ]);
