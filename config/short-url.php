@@ -11,7 +11,7 @@ return [
     | is registered for the short URL route.
     |
     */
-    'prefix' => '/short',
+    'prefix' => '/go',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     |
     */
     'middleware' => [
-        //
+       'web'
     ],
 
     /*
@@ -63,7 +63,7 @@ return [
     | AshAllenDesign\ShortURL\Controllers\ShortURLController
     |
     */
-    'disable_default_route' => false,
+    'disable_default_route' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -137,7 +137,7 @@ return [
     |       used, a 4 character long key will be created.
     |
     */
-    'key_length' => 5,
+    'key_length' => 10,
 
     /*
     |--------------------------------------------------------------------------
